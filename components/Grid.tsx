@@ -7,13 +7,17 @@ import { gridItems } from '@/data'
     return (
         <section id='about'>            
         <BentoGrid>
-        {gridItems.map((item,i)=>(
+        {gridItems.map(({className,title,description,imgClassName,titleClassName,img,spareImg,id})=>(
             <BentoGridItem 
-            className=''
-            id={item.id}
-            key={item.id}
-            title={item.title}
-            description={item.description}
+            id={id}
+            key={id}
+            title={title}
+            description={description}
+            className={className}
+            img={img}
+            imgClassName={imgClassName}
+            titleClassName={titleClassName}
+            spareImg={spareImg}
 
             />
         ))}
