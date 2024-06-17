@@ -1,5 +1,6 @@
 import React from 'react'
 import { projects } from '@/data'
+import { PinContainer } from './3d-pin'
 
 export const RecentProjects = () => {
   return (
@@ -10,8 +11,12 @@ export const RecentProjects = () => {
 
     </h1>
     <div className='flex flex-wrap items-center justify-center p-4 gap-16 mt-10'>
-        {projects.map((project)=>(
-            <div>{project.title}</div>
+        {projects.map(({id,title,des,img,iconLists,link})=>(
+            <PinContainer title={title} href={link}><div key={id} className='lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] '>
+                {title}
+                </div>
+            </PinContainer>
+
         ))}
     </div>
     </div>
