@@ -1,3 +1,4 @@
+import { Approach } from "@/components/Approach";
 import { Client } from "@/components/Client";
 import { Experience } from "@/components/Experience";
 import { Grid } from "@/components/Grid";
@@ -18,6 +19,7 @@ export default function Home() {
        <RecentProjects/>
        <Client/>
        <Experience/>
+       <Approach/>
     </div>
     </main>
   );
